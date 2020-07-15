@@ -7,24 +7,24 @@ public class Tic_Tac_Toe {
 	static String[] board;
 	static String userid;
 
-	public static void main(String[] args) {
-		in = new Scanner(System.in);
-		board = new String[9];
-		userid = "X";
-		String winner = null;
-		BoardMap();
-		printBoard();
-		System.out.println("Welcome Player, please enter a slot number to place X in:");
+	public static void main(final String[] args) {
+        in = new Scanner(System.in);
+        board = new String[9];
+        userid = "X";
+        String winner = null;
+        BoardMap();
+        printBoard();
+        System.out.println("Welcome Player, please enter a slot number to place X in:");
 
-		while (winner == null) {
-			int numInput;
-			try {
-				numInput = in.nextInt();
-				if (!(numInput > 0 && numInput <= 9)) {
-					System.out.println("Invalid input; re-enter slot number:");
-					continue;
-				}
-			} catch (InputMismatchException e) {
+        while (winner == null) {
+            int numInput;
+            try {
+                numInput = in.nextInt();
+                if (!(numInput > 0 && numInput <= 9)) {
+                    System.out.println("Invalid input; re-enter slot number:");
+                    continue;
+                }
+            } catch (final InputMismatchException e) {
 				System.out.println("Invalid input; re-enter slot number:");
 				continue;
 			}
