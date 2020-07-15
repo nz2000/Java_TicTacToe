@@ -6,7 +6,6 @@ public class Tic_Tac_Toe {
 	static Scanner in;
 	static String[] board;
 	static String userid;
-
 	public static void main(final String[] args) {
         in = new Scanner(System.in);
         board = new String[9];
